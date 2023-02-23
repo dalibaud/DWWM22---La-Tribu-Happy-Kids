@@ -1,0 +1,158 @@
+:root {
+  --lightPurple: #d176dd;
+  --intensePurple: #f61db8;
+  --peach: #E47E7E;
+  --lightBlue: #6da7e6;
+  --greenRound: #cfffef;
+  --light: #fff;
+  --borderBox: #e4e4ea;
+  --lightGrey: #f1f1f5;
+  --grey: #717178;
+  --lightDark: #1e1e22;
+  --dark: #000;
+}
+
+
+/*============================
+      COLORS
+==============================*/
+
+
+.lightPurple {
+  color: var(--lightPurple);
+}
+
+.intensePurple {
+  color: var(--intensePurple);
+}
+
+.peach {
+  color: var(--peach);
+}
+
+.blue {
+  color: var(--lightBlue);
+}
+
+.lightGreen {
+  color: var(--greenRound);
+}
+
+.borderBox {
+  color: var(--borderBox);
+}
+
+.white {
+  color: var(--light);
+}
+
+.lightGrey {
+  color: var(--lightGrey);
+}
+
+.grey {
+  color: var(--grey);
+}
+
+.lightDark {
+  color: var(--lightDark);
+}
+
+.dark {
+  color: var(--dark);
+}
+
+
+/*============================
+      BACKGROUND-COLORS
+==============================*/
+
+
+.bg-lightPurple {
+  background-color: var(--lightPurple);
+}
+
+.bg-intensePurple {
+  background-color: var(--intensePurple);
+}
+
+.bg-peach {
+  background-color: var(--peach);
+}
+
+.bg-blue {
+  background-color: var(--lightBlue);
+}
+
+.bg-lightGreen {
+  background-color: var(--greenRound);
+}
+
+.bg-borderBox {
+  background-color: var(--borderBox);
+}
+
+.bg-white {
+  background-color: var(--light);
+}
+
+.bg-lightGrey {
+  background-color: var(--lightGrey);
+}
+
+.bg-grey {
+  background-color: var(--grey);
+}
+
+.bg-lightDark {
+  background-color: var(--lightDark);
+}
+
+.bg-dark {
+  background-color: var(--dark);
+}
+
+/*============================
+      BORDERS
+==============================*/
+
+
+.border-all {
+  border: 1px solid var(--borderBox);
+}
+
+.border-all-dark {
+  border: 1px solid var(--grey);
+}
+
+.border-top {
+  border-top: 1px solid var(--borderBox);
+}
+
+.border-top-dark {
+  border-top: 1px solid var(--grey);
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--borderBox);
+}
+
+.border-bottom-dark {
+  border-bottom: 1px solid var(--grey);
+}
+
+.border-left {
+  border-left: 1px solid var(--borderBox);
+}
+
+.border-left-dark {
+  border-left: 1px solid var(--grey);
+}
+
+.border-right {
+  border-right: 1px solid var(--borderBox);
+}
+
+.border-right-dark {
+  border-right: 1px solid var(--grey);
+}
