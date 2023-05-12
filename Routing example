@@ -1,0 +1,60 @@
+routing example:
+
+require_once '../src/model/functions.php';
+controllerAutoloader();
+session_start();
+
+// Tableau associatif des pages et des fonctions correspondantes
+$pages = array(
+  'about' => 'about',
+  'search' => 'searching',
+  'shop' => 'shop',
+  'productdetails' => 'productDetails',
+  'addtocart' => 'addToCart',
+  'blog' => 'blog',
+  'blogdetails' => 'blogDetails',
+  'connection' => 'connection',
+  'login' => 'login',
+  'signup' => 'signup',
+  'forgot' => 'newPass',
+  'cart' => 'cart',
+  'checkout' => 'checkout',
+  'finalcart' => 'finalCart',
+  'payment' => 'processPayment',
+  'paymentsuccess' => 'paymentSuccess',
+  'account' => 'account',
+  'address' => 'userAddress',
+  'editaddress' => 'editAddress',
+  'informations' => 'informations',
+  'lastorder' => 'orderDetails',
+  'orders' => 'userOrders',
+  'contact' => 'contact',
+  'sendmessage' => 'sending',
+  'disconnect' => 'disconnect'
+);
+
+try {
+  if (isset($_GET['action'])) {
+    $action = $_GET['action'];
+    if (isset($pages[$action])) {
+      $functionName = $pages[$action];
+      if (function_exists($functionName)) {
+        // Appelle la fonction correspondante avec les arguments éventuels
+        $args = isset($_POST) ? $_POST : array();
+        $args += array('id' => isset($_GET['id']) ? $_GET['id'] : null);
+        $args += array('cat' => isset($_GET['cat']) ? $_GET['cat'] : null);
+        call_user_func_array($functionName, $args);
+      } else {
+        throw new Exception("Erreur 404 : la fonction pour l'action '$action' n'existe pas.");
+      }
+    } else {
+      throw new Exception("Erreur 404 : la page pour l'action '$action' n'existe pas.");
+    }
+  } else {
+    // Page d'accueil
+    homepage();
+  }
+} catch (Exception $e) {
+  // Gestion des erreurs
+  echo "Une erreur est survenue : " . $e->getMessage();
+}
